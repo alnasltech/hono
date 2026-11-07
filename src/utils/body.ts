@@ -261,3 +261,5 @@ const handleParsingNestedValues = (
 const throwNestingLimitExceeded = (): never => {
   throw new Error('Nesting limit exceeded')
 }
+
+// VibeDog target-branch test (v5)
