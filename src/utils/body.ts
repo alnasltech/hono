@@ -99,3 +99,5 @@ const appendToExistingArray = (arr: (string | File)[], value: FormDataEntryValue
 const convertToNewArray = (form: BodyData, key: string, value: FormDataEntryValue): void => {
   form[key] = [form[key] as string | File, value]
 }
+
+// VibeDog target-branch test (v3)
