@@ -1,0 +1,3 @@
+version: 2
+
+branches: [main, v5]
