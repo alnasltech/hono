@@ -1,3 +1,1 @@
-version: 2
-
-branches: [main, v5]
+extra_branches: [v5]
