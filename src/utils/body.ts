@@ -3,7 +3,7 @@
  * Body utility.
  */
 
-import type { HonoRequest } from '../request'
+import { HonoRequest } from '../request'
 import { bufferToFormData } from './buffer'
 
 const MAX_NESTING_DEPTH = 32
@@ -77,7 +77,8 @@ export type ParseBodyOptions = {
   dot: boolean
 }
 
-const isRawRequest = (request: HonoRequest | Request): request is Request => 'headers' in request // 'headers' method exists only on Request, not on HonoRequest.
+const isRawRequest = (request: HonoRequest | Request): request is Request =>
+  !(request instanceof HonoRequest)
 
 /**
  * Parses the body of a request based on the provided options.
